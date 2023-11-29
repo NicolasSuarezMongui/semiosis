@@ -1,0 +1,24 @@
+---
+
+import LayoutSimple from "../layouts/LayoutSimple.astro"
+import { projects } from "../data/projects";
+
+const { project } = Astro.params
+
+const info = projects.find(p => p.id === project)
+
+if (!info){
+    return Astro.redirect("/404")
+}
+
+---
+
+<LayoutSimple title={info.title}>
+    <div class="info_about w-[1210px] h-[870px] bg-[#2AB2FF] rounded-[33px] fixed bottom-0 right-0">
+        <div class="relative w-[1150px] h-[820px] bg-[#27A7F0] rounded-[33px] left-16 top-16">
+        </div>
+    </div>
+    <div class="w-[540px] h-[520px] fixed left-28 top-[35%] rounded-[1.25rem]">
+        <img src={info.img} alt="" class="w-full h-full rounded-[1.25rem]" style={`view-transition-name: project-${info.id}`}>
+    </div>
+</LayoutSimple>

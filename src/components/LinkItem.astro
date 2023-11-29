@@ -1,0 +1,68 @@
+---
+
+export interface Props {
+    title: string;
+    margin_top: string;
+    margin_left: string;
+    hover_color: string;
+    next_page: string;
+}
+
+const {
+    title,
+    margin_top,
+    margin_left,
+    hover_color,
+    next_page
+} = Astro.props;
+---
+
+<a href=`/${next_page}` class=`link w-[600px] h-[180px] flex items-center ${margin_top} ${margin_left}` style=`--hover_color:${hover_color}`>
+    <div class="circle rounded-full flex w-[180px] h-[180px] bg-white justify-center items-center">
+
+    </div>
+    <h1 class="ml-20 text-6xl text-[#238CD5]" >
+        {title}
+    </h1>
+</a>
+
+
+<style>
+
+    .circle::before, h1{
+        transition: .5s ease;
+    }
+
+    .link:hover > .circle::before,
+    .link:hover > h1
+    {
+        transform: scale(1.2);
+    }
+
+    .link:hover > .circle::before {
+        background: var(--hover_color)
+    }
+
+    .link:hover > h1 {
+        color: var(--hover_color);
+    }
+
+    .circle {
+        filter: drop-shadow(-4px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    h1 {
+        transform: color;
+    }
+
+    .circle::before {
+        content: "";
+        background: #238CD5;
+        width: 95px;
+        height: 95px;
+        border-radius: 50%;
+        filter: drop-shadow(-4px 4px 4px rgba(0, 0, 0, 0.25));
+        transform: background;
+    }
+
+</style>

@@ -1,0 +1,42 @@
+---
+import localWhiteIcon from '../imgs/logo_blanco.png'
+import localTxtWhite from '../imgs/txt_img_blanco.png'
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+</head>
+<body>
+    <div class="nav w-screen h-[101px] bg-[#2AB2FF] rounded-br-[80px] rounded-bl-[80px] flex items-center justify-between px-20">
+        <img src={localTxtWhite.src} class="w-[276px] h-[45px]">
+        <img src={localWhiteIcon.src} >
+    </div>
+    <div class="figure w-[148px] h-[148px] bg-white rounded-full z-10 fixed flex items-center justify-center top-[27px] left-[880px]"></div>
+
+    <div class="content w-full h-full flex justify-center items-center">
+        <slot/>
+    </div>
+
+</body>
+</html>
+
+<style>
+    .figure::before{
+        content: '';
+        width: 107px;
+        height: 107px;
+        border-radius: 50%;
+        background-color: #2AB2FF;
+    }
+</style>

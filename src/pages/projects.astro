@@ -1,0 +1,29 @@
+---
+import { projects } from "../data/projects";
+import Layout from "../layouts/Layout.astro";
+import ProjectItem from "../components/ProjectItem.astro";
+---
+
+<Layout title="Proyectos">
+    <div class="view p-20">
+        {
+            projects.map(({id, title, img}) => {
+                return (
+                    <ProjectItem id={id} title={title} imgSrc={img} />
+                )
+            })
+        }
+    </div>
+</Layout>
+
+<style>
+    .view{
+        max-width: 95%;
+        max-height: 940px;
+        display: flex;
+        flex-wrap: wrap;
+        overflow-y: auto;
+        justify-content: space-between;
+        gap: 20px;
+    }
+</style>

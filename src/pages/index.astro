@@ -1,0 +1,51 @@
+---
+import localIcon from '../imgs/logo.png'
+import localIconText from '../imgs/txt_img.png'
+import LinkItem from '../components/LinkItem.astro'
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body class="flex transition-all">
+
+		<div class="figure w-[1560px] h-[1416.85px] rounded-full ml-[-518px] bg-[#2AB2FF] flex flex-col rotate-[3deg] justify-center items-center fixed top-[-182px]">
+			<div class="aux"></div>
+			<div class="logo h-min rotate-[-3deg] ml-[270px]">
+				<img src={localIcon.src} alt="" class=" w-[580px] h-[447px]">
+				<img src={localIconText.src} alt="" class=" w-[400px] h-[65px] z-10 ml-[100px] mt-[-250px]">
+			</div>
+			<div class="w-[588px] h-[304px] ml-[400px] mt-[250px] rotate-[-3deg]">
+				<p class="text-[20px] tracking-[0.5px] leading-9">
+					<span class="text-white font-extrabold w-full">Semiosis Lab</span> parte de la premisa de que todos los seres humanos tienen un gran potencial creativo e innovador que puede ser liberado y desarrollado. Con esta visión, desde su fundación en 2013 se han consolidado como pioneros en Colombia en el campo de la innovación y el diseño, creando el primer laboratorio de creativa en el país.
+				</p>
+			</div>
+		</div>
+
+		<div class="nav_links w-2/3 h-screen bg-transparent ml-[40%] z-10">
+			<LinkItem title="Nosotros" margin_top="mt-[41px]" margin_left="ml-[96px]" hover_color="#D90146" next_page='#'/>
+			<LinkItem title="Servicios" margin_top="mt-[85px]" margin_left="ml-[185px]" hover_color="#005F2B" next_page='services'/>
+			<LinkItem title="Proyectos" margin_top="mt-[85px]" margin_left="ml-[195px]" hover_color="#C30177" next_page='projects'/>
+			<LinkItem title="Equipo" margin_top="mt-[85px]" margin_left="ml-[96px]" hover_color="#C09700" next_page='#'/>
+		</div>
+	</body>
+</html>
+
+<style>
+	.aux{
+		background-image: url("../imgs/logo_bg.png");
+		width: 100vw;
+		height: 100vh;
+		position: fixed;
+		background-repeat: no-repeat;
+		transform: rotate(-3deg);
+		background-size: contain;
+		background-position: center;
+		left: 70px;
+	}
+</style>
