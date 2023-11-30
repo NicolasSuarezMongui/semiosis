@@ -1,0 +1,22 @@
+---
+
+export interface Props {
+    color: string;
+    link: string;
+}
+
+
+const {
+    color,
+    link,
+} = Astro.props;
+
+
+---
+
+<a href=`${link}` class=`rounded-full h-12 w-12 m-1 z-10 flex justify-center items-center` style=`background: ${color}`>
+   <slot/>
+</a>    
+
+
+

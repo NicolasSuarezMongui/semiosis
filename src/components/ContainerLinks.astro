@@ -1,0 +1,27 @@
+---
+
+export interface Props {
+    gap:string;
+    pb: string;
+    pt: string;
+    pl: string;
+    pr: string;
+    bottom:string;
+    left:string;
+    justify:string;
+}
+
+const {
+    gap,
+    pb,
+    pt,
+    pl,
+    pr,
+    bottom,
+    left,
+    justify
+} = Astro.props;
+---
+<div id="redes" class=`flex justify-${justify} pb-[${pb}] pl-[${pl}] pt-[${pt}] pr-[${pr}] gap-[${gap}]` style=`position:absolute;bottom:${bottom};left:${left}`>
+   <slot/>
+</div>

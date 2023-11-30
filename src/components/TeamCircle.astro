@@ -1,0 +1,31 @@
+---
+import { identifierToKeywordKind } from 'typescript';
+
+export interface Props {
+    id:string;
+    imagen:string;
+    diametro:string;
+    top:string;
+    left:string;
+    titulo:string;
+    cargo:string;
+}
+
+const {
+    id,
+    imagen,
+    diametro,
+    top,
+    left,
+    titulo,
+    cargo,
+ 
+} = Astro.props;
+---
+<div id=`${id}` class=`w-[${diametro}] h-[${diametro}] relativo top-[${top}] left-[${left}] overflow-hidden rounded-full bg-cover` style=`background-image: url('${imagen}');`>
+    <div id="textos" class="absolute top-[50%] left-[50%]" style="transform: translate(-50%,-50%);" >
+        <h1>{titulo}</h1>
+        <h2>{cargo} </h2>
+    </div>
+    
+</div>
