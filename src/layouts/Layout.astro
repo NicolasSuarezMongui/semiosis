@@ -18,30 +18,64 @@ const { title } = Astro.props;
     <title>{title}</title>
 </head>
 <body>
-    <div class="nav w-screen h-[101px] bg-[#2AB2FF] rounded-br-[80px] rounded-bl-[80px] flex items-center justify-between px-20">
-        <img src={localTxtWhite.src} class="w-[276px] h-[45px]">
-        <img src={localWhiteIcon.src} >
-    </div>
-    <div class="figure w-[148px] h-[148px] bg-white rounded-full z-10 fixed flex items-center justify-center top-[27px] left-[880px]"></div>
-
-    <div class="content w-full h-full flex justify-center items-center py-14">
-        <slot/>
-    </div>
-
-    <div class="footer w-screen h-[75px] flex justify-center fixed bottom-0">
-        <div class="pg-name w-[608px] h-full bg-[#2AB2FF] rounded-tr-[80px] rounded-tl-[80px] flex justify-center items-center">
-            <h1 class="text-[50px] text-white font-bold">{title}</h1>
+    <div class="w-screen h-screen">
+        <div id="navbar" class="nav w-[100%] h-[15%] bg-[#2AB2FF] z-10 rounded-br-[5rem] rounded-bl-[5rem] flex items-center justify-between px-20 relative">
+            <img src={localTxtWhite.src} id="primera_imagen" style="width: 20.20vw;">
+            <img src={localWhiteIcon.src} id="segunda_imagen" style="width: 9.1vw;">
+            <div id="figura" class="figure bg-white rounded-full z-20 absolute flex items-center justify-center bottom-[0] left-[50%]" style="transform: translate(-50%,50%);width:8.5vw;height:8.5vw"></div>
         </div>
+        
+    
+        <div class="content w-full h-[75%] flex justify-center items-center relative" style="">
+            <slot/>
+        </div>
+    
+        <div class="footer w-screen h-[10%] flex justify-center fixed bottom-0">
+            <div class="pg-name w-[38rem] h-full bg-[#2AB2FF] rounded-tr-[80px] rounded-tl-[80px] flex justify-center items-center">
+                <h1 class="text-[3.125rem] text-white font-bold">{title}</h1>
+            </div>
+        </div>
+
     </div>
+   
 </body>
 </html>
 
 <style>
-    .figure::before{
+    .figure::before{ /*azul*/
         content: '';
-        width: 107px;
-        height: 107px;
+        width: 7vw;
+        height: 7vw;
         border-radius: 50%;
         background-color: #2AB2FF;
     }
+    @media (max-width: 32rem) {
+      /* Estilos específicos para pantallas con ancho menor o igual a 500px */
+      .figure::before{
+        content: '';
+        width: 9vw;
+        height: 9vw;
+       
+     }
+     .figure{ 
+        width: 10.5vw !important;
+        height: 10.5vw !important;
+     }
+     #primera_imagen{
+        width: 24vw!important;
+     }
+     #segunda_imagen{
+        width: 13vw !important;
+     }
+
+    }
+    @media (min-width: 80rem) {
+        #primera_imagen{
+        width: 17vw!important;
+             }
+        #segunda_imagen{
+        width: 7vw !important;
+        }
+    }
+   
 </style>

@@ -6,8 +6,8 @@ import LittleSquareComponent from './LittleSquareComponent.astro';
 
 ---
 
-<div id="contenedor_general" class="flex gap-[23px] h-[43rem] w-[90rem] rounded-br-[100px] overflow-hidden" >
-    <div id="primera_mitad" class="flex h-full w-2/4 rounded-bl-[100px] rounded-tl-[100px] bg-gradient-to-t from-020065 via-transparent to-transparent overflow-hidden relative shadow-2xl">
+<div id="contenedor_general" class="flex gap-[23px] h-[80%] w-[80%] rounded-br-[100px] rounded-tr-[100px]" style="">
+    <div id="primera_mitad" class="flex h-full w-2/4 rounded-bl-[100px] rounded-tl-[100px] bg-gradient-to-t from-020065 via-transparent to-transparent overflow-hidden relative shadow-2xl ">
         <img src={localServices.src} alt="Sercivios" class="object-cover w-full h-full absolute hover:scale-105 transition-all duration-300">
         <ContainerLinks gap="0px" pb="9px" pl="10px" pt="0px" pr="0px" justify="center" bottom='1rem' left="45px">
             <LinkCircle color="#77B3D4" link="https://www.linkedin.com/in/semiosis-lab-uis-65a15311a/?originalSubdomain=co">
@@ -30,7 +30,12 @@ import LittleSquareComponent from './LittleSquareComponent.astro';
             alt='hola'
             title="Fabrica de innovacion"
             contenido="En la fabrica de innovacion se realizan productos innovadores en 90 dias ya no se que mas parla echar "
-        </LittleSquareComponent> 
+            r_tr="0px";
+            r_tl="0px";
+            r_br="0px";
+            r_bl="0px";
+            ></LittleSquareComponent>
+        
         <LittleSquareComponent  
             color="#77B3D4"
             link="#"
@@ -38,8 +43,11 @@ import LittleSquareComponent from './LittleSquareComponent.astro';
             alt='hola'
             title="Fabrica de innovacion"
             contenido="En la fabrica de innovacion se realizan productos innovadores en 90 dias ya no se que mas parla echar "
-           
-        </LittleSquareComponent>
+            r_tr="100px";
+            r_tl="0px";
+            r_br="0px";
+            r_bl="0px";
+        ></LittleSquareComponent>
         <LittleSquareComponent  
             color="#77B3D4"
             link="#"
@@ -47,8 +55,11 @@ import LittleSquareComponent from './LittleSquareComponent.astro';
             alt='hola'
             title="Fabrica de innovacion"
             contenido="En la fabrica de innovacion se realizan productos innovadores en 90 dias ya no se que mas parla echar "
-           
-        </LittleSquareComponent>
+            r_tr="0px";
+            r_tl="0px";
+            r_br="0px";
+            r_bl="0px";
+        ></LittleSquareComponent>
         <LittleSquareComponent  
             color="#77B3D4"
             link="#"
@@ -56,7 +67,11 @@ import LittleSquareComponent from './LittleSquareComponent.astro';
             alt='hola'
             title="Fabrica de innovacion"
             contenido="En la fabrica de innovacion se realizan productos innovadores en 90 dias ya no se que mas parla echar "
-        </LittleSquareComponent>
+            r_tr="0px";
+            r_tl="0px";
+            r_br="100px";
+            r_bl="0px";
+            ></LittleSquareComponent>
     </div>
 
 
