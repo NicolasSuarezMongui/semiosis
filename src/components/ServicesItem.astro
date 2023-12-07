@@ -1,0 +1,118 @@
+---
+import ContainerLinks from './ContainerLinks.astro';
+import LinkCircle from './LinkCircle.astro';
+import localServices from '../imgs/Services1.png'
+import LittleSquareComponent from './LittleSquareComponent.astro';
+
+---
+
+<div id="contenedor_general" class="flex gap-[23px] h-[80%] w-[80%] rounded-br-[100px] rounded-tr-[100px]" style="">
+    <div id="primera_mitad" class="flex h-full w-2/4 rounded-bl-[100px] rounded-tl-[100px] bg-gradient-to-t from-020065 via-transparent to-transparent overflow-hidden relative shadow-2xl ">
+        <img src={localServices.src} alt="Sercivios" class="object-cover w-full h-full absolute hover:scale-105 transition-all duration-300">
+        <ContainerLinks gap="0px" pb="9px" pl="10px" pt="0px" pr="0px" justify="center" bottom='1rem' left="45px">
+            <LinkCircle color="#77B3D4" link="https://www.linkedin.com/in/semiosis-lab-uis-65a15311a/?originalSubdomain=co">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin " width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" /><path d="M8 11l0 5" /><path d="M8 8l0 .01" /><path d="M12 16l0 -5" /><path d="M16 16v-3a2 2 0 0 0 -4 0" /></svg>
+            </LinkCircle>
+            <LinkCircle color="#E4405F" link="https://www.instagram.com/semiosislab/?hl=es-la">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-instagram" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 4a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M16.5 7.5l0 .01" /></svg>
+            </LinkCircle>
+            <LinkCircle color="#00D95F" link="https://wa.me/573044805568?text=Hola%2C%20estoy%20interesad@%20en%20sus%20servicios.">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-whatsapp" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="#fff" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" /><path d="M9 10a.5 .5 0 0 0 1 0v-1a.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a.5 .5 0 0 0 0 -1h-1a.5 .5 0 0 0 0 1" /></svg>
+            </LinkCircle>
+        </ContainerLinks>
+        
+    </div>
+    <div id="segunda_mitad" class="grid grid-rows-2 grid-cols-2 gap-[10px] w-2/4 h-full ">
+        <LittleSquareComponent  
+            color="#77B3D4"
+            link="#"
+            imagen={localServices.src}
+            alt='hola'
+            title="Fabrica de innovacion"
+            contenido="En la fabrica de innovacion se realizan productos innovadores en 90 dias ya no se que mas parla echar "
+            r_tr="0px";
+            r_tl="0px";
+            r_br="0px";
+            r_bl="0px";
+            ></LittleSquareComponent>
+        
+        <LittleSquareComponent  
+            color="#77B3D4"
+            link="#"
+            imagen={localServices.src}
+            alt='hola'
+            title="Fabrica de innovacion"
+            contenido="En la fabrica de innovacion se realizan productos innovadores en 90 dias ya no se que mas parla echar "
+            r_tr="100px";
+            r_tl="0px";
+            r_br="0px";
+            r_bl="0px";
+        ></LittleSquareComponent>
+        <LittleSquareComponent  
+            color="#77B3D4"
+            link="#"
+            imagen={localServices.src}
+            alt='hola'
+            title="Fabrica de innovacion"
+            contenido="En la fabrica de innovacion se realizan productos innovadores en 90 dias ya no se que mas parla echar "
+            r_tr="0px";
+            r_tl="0px";
+            r_br="0px";
+            r_bl="0px";
+        ></LittleSquareComponent>
+        <LittleSquareComponent  
+            color="#77B3D4"
+            link="#"
+            imagen={localServices.src}
+            alt='hola'
+            title="Fabrica de innovacion"
+            contenido="En la fabrica de innovacion se realizan productos innovadores en 90 dias ya no se que mas parla echar "
+            r_tr="0px";
+            r_tl="0px";
+            r_br="100px";
+            r_bl="0px";
+            ></LittleSquareComponent>
+    </div>
+
+
+</div>
+
+<style>
+
+    .circle::before, h1{
+        transition: .5s ease;
+    }
+
+    .link:hover > .circle::before,
+    .link:hover > h1
+    {
+        transform: scale(1.2);
+    }
+
+    .link:hover > .circle::before {
+        background: var(--hover_color)
+    }
+
+    .link:hover > h1 {
+        color: var(--hover_color);
+    }
+
+    .circle {
+        filter: drop-shadow(-4px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+
+    h1 {
+        transform: color;
+    }
+
+    .circle::before {
+        content: "";
+        background: #238CD5;
+        width: 95px;
+        height: 95px;
+        border-radius: 50%;
+        filter: drop-shadow(-4px 4px 4px rgba(0, 0, 0, 0.25));
+        transform: background;
+    }
+
+</style>
